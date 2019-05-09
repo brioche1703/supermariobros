@@ -19,11 +19,13 @@ export function createBackgroundLayer(backgrounds, sprites) {
 
 	return function drawBackgroundLayer(context) {
 		context.drawImage(buffer, 0, 0);
-	}
+	};
 }
 
-export function createSpriteLayer(entity) {
+export function createSpriteLayer(entities) {
 	return function drawSpriteLayer(context) {
-		entity.draw(context);
+		entities.forEach(entity => {
+			entity.draw(context);
+		});
 	};
 }
