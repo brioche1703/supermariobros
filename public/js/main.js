@@ -5,8 +5,6 @@ import {createMario} from './entities.js';
 
 import Keyboard from './KeyboardState.js';
 
-
-
 const canvas = document.getElementById('screen');
 const context = canvas.getContext('2d');
 
