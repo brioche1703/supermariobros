@@ -38,16 +38,26 @@ export function loadLevel(name) {
 	.then(([levelSpec, backgroundSprites]) => {
 		const level = new Level();
 
+<<<<<<< HEAD
 		createTiles(level, levelSpec.backgrounds);
 
 		const backgroundLayer = createBackgroundLayer(level, backgroundSprites);
+=======
+		const backgroundLayer = createBackgroundLayer(levelSpec.backgrounds, backgroundSprites);
+>>>>>>> f9abd896e4c53d13bb20429d578db48b36a5b154
 		level.comp.layers.push(backgroundLayer);
 
 		const spriteLayer = createSpriteLayer(level.entities);
 		level.comp.layers.push(spriteLayer);
 
+<<<<<<< HEAD
 		console.table(level.tiles.grid);
 
 		return level;
 	});
 }
+=======
+		return level;
+	});
+}
+>>>>>>> f9abd896e4c53d13bb20429d578db48b36a5b154
